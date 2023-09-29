@@ -5,6 +5,7 @@ import (
 	"log"
 	"net"
 
+	pb "github.com/ptrenwith/goWebApi/greetings/pb"
 	"google.golang.org/grpc"
 )
 
@@ -24,6 +25,9 @@ func main() {
 	grpcServer.Serve(lis)
 }
 
-func SayHallo(req *pb.HelloRequest) error {
-	return nil
+func GreetVisitor(req *pb.HelloRequest) *pb.HelloReply {
+	greeting := fmt.Sprintf("Hello %s", req.Name)
+	return &pb.HelloReply{
+		Message: greeting,
+	}
 }

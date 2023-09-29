@@ -9,7 +9,7 @@ go run server
 
 # Proto
 # cd to proto directory
-protoc greeting.proto --go_out=. --go_opt=paths=source_relative
+protoc greeting.proto --go_out=./pb --go_opt=paths=source_relative
 
 Optional: 
 $ export GRPC_GO_LOG_VERBOSITY_LEVEL=99
