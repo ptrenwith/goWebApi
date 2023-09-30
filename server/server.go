@@ -10,6 +10,7 @@ import (
 
 	"github.com/grpc-ecosystem/grpc-gateway/runtime"
 	greetingpb "github.com/ptrenwith/go_api/proto/pb/greeting"
+	"github.com/ptrenwith/go_api/server/services"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
 )
@@ -36,7 +37,7 @@ func StartGRPCServer() {
 	grpcServer := grpc.NewServer(opts...)
 
 	// Register services
-	greetingpb.RegisterGreeterServer(grpcServer, GreetingService{})
+	greetingpb.RegisterGreeterServer(grpcServer, services.GreetingService{})
 
 	// Start Server
 	log.Printf("gRPC Server listening on: %s", lis.Addr())
