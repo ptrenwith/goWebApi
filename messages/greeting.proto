@@ -1,8 +1,8 @@
 syntax = "proto3";
 
-package greetings;
+package messages;
 
-option go_package = "github.com/ptrenwith/goWebApi/greetings";
+option go_package = "github.com/ptrenwith/go_api/messages";
 
 // The greeting service definition.
 service Greeter {

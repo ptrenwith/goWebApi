@@ -1,6 +1,8 @@
-# goWebApi
+# go_api
 
-server module=server
+This is a skeleton for a Go gRPC API with a REST interface for external HTTP comms
+
+project module=github.com/ptrenwith/go_api
 
 go get -u google.golang.org/grpc
 
