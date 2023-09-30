@@ -3,17 +3,19 @@ package server
 import (
 	"context"
 	"fmt"
+	"log"
 
-	pb "github.com/ptrenwith/go_api/messages/pb"
+	greetingpb "github.com/ptrenwith/go_api/proto/pb/greeting"
 )
 
 type GreetingService struct {
-	pb.UnimplementedGreeterServer
+	greetingpb.UnimplementedGreeterServer
 }
 
-func (h GreetingService) SayHello(ctx context.Context, req *pb.HelloRequest) (*pb.HelloReply, error) {
+func (h GreetingService) SayHello(ctx context.Context, req *greetingpb.HelloRequest) (*greetingpb.HelloReply, error) {
 	greeting := fmt.Sprintf("Hello %s", req.Name)
-	return &pb.HelloReply{
+	log.Println(greeting)
+	return &greetingpb.HelloReply{
 		Message: greeting,
 	}, nil
 }

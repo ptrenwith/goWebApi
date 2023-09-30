@@ -4,10 +4,19 @@ package messages;
 
 option go_package = "github.com/ptrenwith/go_api/messages";
 
+// Google API Files: https://github.com/googleapis/googleapis/tree/master/google/api
+// Copy to /proto/google/api/*.proto
+import "google/api/annotations.proto";
+
+
 // The greeting service definition.
 service Greeter {
   // Sends a greeting
-  rpc SayHello (HelloRequest) returns (HelloReply) {}
+  rpc SayHello (HelloRequest) returns (HelloReply) {
+    option (google.api.http) = {
+      get: "/v1/greeting"
+    };
+  }
 }
 
 // The request message containing the user's name.
