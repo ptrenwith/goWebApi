@@ -3,7 +3,7 @@ TARGET=.
 all: clean build
 
 clean:
-	rm -rf $(TARGET)
+	rm -rf $(TARGET)/pb
 
 build:
 	go build -o $(TARGET) main.go
