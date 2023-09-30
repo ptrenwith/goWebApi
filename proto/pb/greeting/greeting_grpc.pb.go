@@ -4,7 +4,7 @@
 // - protoc             v3.12.4
 // source: greeting/greeting.proto
 
-package proto
+package greeting
 
 import (
 	context "context"

@@ -2,11 +2,11 @@
 // source: greeting/greeting.proto
 
 /*
-Package proto is a reverse proxy.
+Package greeting is a reverse proxy.
 
 It translates gRPC into RESTful JSON APIs.
 */
-package proto
+package greeting
 
 import (
 	"io"

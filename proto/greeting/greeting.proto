@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package proto;
 
-option go_package = "github.com/ptrenwith/go_api/proto";
+option go_package = "github.com/ptrenwith/go_api/proto/greeting";
 
 // Google API Files: https://github.com/googleapis/googleapis/tree/master/google/api
 // Copy to /proto/google/api/*.proto
