@@ -10,8 +10,9 @@ go build server
 go run server
 
 # Proto
-# cd to proto directory
-protoc greeting.proto --go_out=./pb --go_opt=paths=source_relative
+# cd to root directory
+# optionally add --go-grpc_opt=require_unimplemented_servers=false if you do not want forward compatibility
+protoc --proto_path=messages --go-grpc_out=messages/pb --go-grpc_opt=paths=source_relative --go_out=./messages/pb --go_opt=paths=source_relative messages/*.proto 
 
 Optional: 
 $ export GRPC_GO_LOG_VERBOSITY_LEVEL=99
