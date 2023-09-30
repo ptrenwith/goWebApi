@@ -8,6 +8,7 @@
 *.so
 *.dylib
 go_api
+__debug_bin*
 
 # Test binary, built with `go test -c`
 *.test
@@ -24,4 +25,4 @@ go.work.sum
 
 #.vscode files 
 .vscode/
-__debug_bin*
+
